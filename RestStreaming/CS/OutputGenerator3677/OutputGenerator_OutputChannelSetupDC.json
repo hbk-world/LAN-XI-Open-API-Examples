@@ -1,0 +1,23 @@
+{
+    "outputs" :
+    [
+      {
+        "floating": false,
+        "gain": 0.5,
+        "offset": 0.0,
+        "inputs": [
+          {
+            "gain": 0.99999,
+            "number": 1,
+            "signalType": "dc"
+          },
+          {
+            "number": 2,
+            "signalType": "none"
+          }
+        ],
+        "number": 1
+      }
+
+    ]
+}

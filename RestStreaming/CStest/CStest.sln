@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingOutputDelay", "StreamingOutputDelay\StreamingOutputDelay.csproj", "{0970B0E7-A4D8-4C3C-9DCC-8AA07EEA3CE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "..\CS\Shared\Shared.csproj", "{03EAE601-8BF7-4A90-B6DC-1FD0F4489D6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingOutputTruncation", "StreamingOutputTruncation\StreamingOutputTruncation.csproj", "{956D04D0-ECD7-4A22-BDF5-B1C1CD941A18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerControl", "PowerControl\PowerControl.csproj", "{A10C7E10-68EE-41E3-88C5-63EEF4F09DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestResult", "TestResult\TestResult.csproj", "{7A5AE6CC-49CB-4794-9CCE-AA63E8644CBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamingFastCycles", "StreamingFastCycles\StreamingFastCycles.csproj", "{383F222E-BD20-4E8C-807E-FD8A3E9EA42D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0970B0E7-A4D8-4C3C-9DCC-8AA07EEA3CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0970B0E7-A4D8-4C3C-9DCC-8AA07EEA3CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0970B0E7-A4D8-4C3C-9DCC-8AA07EEA3CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0970B0E7-A4D8-4C3C-9DCC-8AA07EEA3CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03EAE601-8BF7-4A90-B6DC-1FD0F4489D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03EAE601-8BF7-4A90-B6DC-1FD0F4489D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03EAE601-8BF7-4A90-B6DC-1FD0F4489D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03EAE601-8BF7-4A90-B6DC-1FD0F4489D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{956D04D0-ECD7-4A22-BDF5-B1C1CD941A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956D04D0-ECD7-4A22-BDF5-B1C1CD941A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956D04D0-ECD7-4A22-BDF5-B1C1CD941A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956D04D0-ECD7-4A22-BDF5-B1C1CD941A18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10C7E10-68EE-41E3-88C5-63EEF4F09DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10C7E10-68EE-41E3-88C5-63EEF4F09DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10C7E10-68EE-41E3-88C5-63EEF4F09DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10C7E10-68EE-41E3-88C5-63EEF4F09DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5AE6CC-49CB-4794-9CCE-AA63E8644CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5AE6CC-49CB-4794-9CCE-AA63E8644CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5AE6CC-49CB-4794-9CCE-AA63E8644CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5AE6CC-49CB-4794-9CCE-AA63E8644CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383F222E-BD20-4E8C-807E-FD8A3E9EA42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383F222E-BD20-4E8C-807E-FD8A3E9EA42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383F222E-BD20-4E8C-807E-FD8A3E9EA42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383F222E-BD20-4E8C-807E-FD8A3E9EA42D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

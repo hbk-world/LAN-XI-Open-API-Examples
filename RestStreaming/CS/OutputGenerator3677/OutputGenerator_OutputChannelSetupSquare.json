@@ -1,0 +1,29 @@
+{
+    "outputs" :
+    [
+      {
+        "floating": false,
+        "gain": 0.5,
+        "offset": 0.0,
+        "inputs": [
+          {
+            "frequency": 1024,
+            "phase": 0.0,
+            "highlevel": 0.999,
+            "lowlevel": -0.999,
+            "dutycycle": 20,
+            "repetitions": 0,
+            "offset": 0.0,
+            "number": 1,
+            "signalType": "square"
+          },
+          {
+            "number": 2,
+            "signalType": "none"
+          }
+        ],
+        "number": 1
+      }
+
+    ]
+}

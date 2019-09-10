@@ -1,0 +1,41 @@
+{
+    "outputs" :
+    [
+        {
+            "floating" : false,
+            "gain" : 0.005,
+            "inputs" :
+            [
+                {
+                    "frequency" : 1046.5,
+                    "gain" : 0.999,
+                    "number" : 1,
+                    "signalType" : "sine"
+                },
+                {
+                    "number" : 2,
+                    "signalType" : "none"
+                }
+            ],
+            "number" : 1
+        },
+        {
+            "floating" : false,
+            "gain" : 0.03,
+            "inputs" :
+            [
+                {
+                    "frequency" : 1396.91,
+                    "gain" : 0.999,
+                    "number" : 1,
+                    "signalType" : "sine"
+                },
+                {
+                    "number" : 2,
+                    "signalType" : "none"
+                }
+            ],
+            "number" : 2
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "outputs" :
+    [
+      {
+        "floating": false,
+        "gain": 0.5,
+        "offset": 0.0,
+        "inputs": [
+          {
+            "signalType": "random",
+            "gen_number": 0,
+            "hp_filter": 0,
+            "pink_filter": 0,
+            "center_frequency": 8192.0,
+            "bandwidth": 2048.0,
+            "gain": 0.999,
+            "offset": 0.0,
+            "number": 1
+          },
+          {
+            "number": 2,
+            "signalType": "none"
+          }
+        ],
+        "number": 1
+      }
+    ]
+}

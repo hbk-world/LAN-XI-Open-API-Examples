@@ -1,0 +1,10 @@
+OutputGenerator
+
+This sample shows a very basic use of controlling generator output over network on a B&K LAN-XI 3160 module.
+The module is configured using REST commands.
+
+The purpose of the sample is to illustrate what is needed to make generator output work, and thus there has not been put much emphasis on error handling etc.
+
+To run this example, change the IP address in the LANXI_IP constant.
+
+The OutputChannelStart.json file may be altered to change which channels to start. OutputChannelSetup.json and OutputChannelSetup2.json may be changed to configure the generators - frequencies etc.

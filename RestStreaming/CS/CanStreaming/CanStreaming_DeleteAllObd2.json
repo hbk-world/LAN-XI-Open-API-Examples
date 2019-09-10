@@ -1,0 +1,21 @@
+{  
+   "action": "DeleteAll",
+   "Obd2Messages": [
+	   {
+	   "channel": 1,
+	   "messageID": 2016,
+	   "cycleTime": 1000,
+	   "messageInfo": 0,
+	   "dataSize": 3,
+	   "data": [2, 1, 12]
+	   },
+	   {
+	   "channel": 2,
+	   "messageID": 2016,
+	   "cycleTime": 1000,
+	   "messageInfo": 0,
+	   "dataSize": 3,
+	   "data": [2, 1, 12]
+	   }	   
+   ]
+}

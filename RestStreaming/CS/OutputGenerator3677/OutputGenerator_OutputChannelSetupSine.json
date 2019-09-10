@@ -1,0 +1,26 @@
+{
+    "outputs" :
+    [
+      {
+        "floating": false,
+        "gain": 0.5,
+        "offset": 0.0,
+        "inputs": [
+          {
+            "frequency": 1024,
+            "phase": 180.0,
+            "gain": 0.999,
+            "offset": 0.0,
+            "number": 1,
+            "signalType": "sine"
+          },
+          {
+            "number": 2,
+            "signalType": "none"
+          }
+        ],
+        "number": 1
+      }
+
+    ]
+}

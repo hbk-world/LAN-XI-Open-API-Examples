@@ -1,0 +1,28 @@
+{
+    "outputs" :
+    [
+      {
+        "floating": false,
+        "gain": 0.5,
+        "offset": 0.0,
+        "inputs": [
+          {
+            "signalType": "logsweep",
+            "direction": 1,
+            "start_frequency": 1024.0,
+            "stop_frequency": 5000.0,
+            "phase": 0.0,
+            "decades_sec": 2.0,
+            "gain": 0.999,
+            "offset": 0.0,
+            "number": 1
+          },
+          {
+            "number": 2,
+            "signalType": "none"
+          }
+        ],
+        "number": 1
+      }
+    ]
+}

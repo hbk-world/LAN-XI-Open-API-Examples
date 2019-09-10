@@ -1,0 +1,29 @@
+{
+    "outputs" :
+    [
+      {
+        "number": 1,
+        "floating": false,
+        "mixfunction": "sum",
+        "gain": 0.5,
+        "offset": 0.0,
+        "inputs": [
+          {
+            "signalType": "linsweep",
+            "direction": 0,
+            "start_frequency": 1024.0,
+            "stop_frequency": 5000.0,
+            "phase": 0.0,
+            "hz_second": 1500.0,
+            "gain": 0.999,
+            "offset": 0.0,
+            "number": 1
+          },
+          {
+            "number": 2,
+            "signalType": "none"
+          }
+        ]
+      }
+    ]
+}

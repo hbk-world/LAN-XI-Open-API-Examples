@@ -1,0 +1,112 @@
+ {
+ "channels" : [
+ {
+	"bandwidth" : "51.2 kHz",
+	"ccld" : false,
+	"channel" : 1,
+	"destinations" : [ "socket" ],
+	"enabled" : true,
+	"filter" : "DC",
+	"bridgeCompletion"  : "None",
+	"bridgeQuarterCompletionImpedance" : "350 Ohm",
+	"bridgeExcCurrent" : 0.0,               
+	"bridgeExcOn" : true,                  
+	"bridgeExcVoltage" : 4.0,              
+	"bridgeRemoteSenseWiring" : "None",     
+	"bridgeShunt" : false,                  
+	"bridgeSingleEnd" : false,              
+	"bridgeSupplyType" : "DC Voltage",      
+	"floating" : false,
+	"ConnectorSelect" : "Bridge",
+	"name" : "Channel 1",
+	"polvolt" : false,
+	"range" : "10 Vpeak",
+	"transducer" : {
+		"requires200V" : false,
+		"requiresCcld" : false,
+		"sensitivity" : 1,
+		"serialNumber" : 0,
+		 "type" : {
+			 "model" : "",
+			 "number" : "None",
+			 "prefix" : "",
+			 "variant" : ""
+		 },
+		 "unit" : "V"
+	 }
+ },
+ {
+ "bandwidth" : "51.2 kHz",
+ "ccld" : false,
+ "channel" : 2,
+ "destinations" : [ "socket" ],
+ "enabled" : true,
+ "filter" : "DC",
+ "floating" : false,
+ "ConnectorSelect" : "Bridge",
+	"bridgeCompletion"  : "QuarterPos",
+	"bridgeQuarterCompletionImpedance" : "350 Ohm",
+	"bridgeExcCurrent" : 0.0,               
+	"bridgeExcOn" : true,                  
+	"bridgeExcVoltage" : 400.0,              
+	"bridgeRemoteSenseWiring" : "None",     
+	"bridgeShunt" : false,                  
+	"bridgeSingleEnd" : false,              
+	"bridgeSupplyType" : "DC Voltage",      
+ "name" : "Channel 2",
+ "polvolt" : false,
+ "range" : "10 Vpeak",
+ "transducer" : {
+ "requires200V" : false,
+ "requiresCcld" : false,
+ "sensitivity" : 1,
+ "serialNumber" : 0,
+ "type" : {
+ "model" : "",
+ "number" : "None",
+ "prefix" : "",
+ "variant" : ""
+ },
+ "unit" : "V"
+ }
+ },
+ {
+ "bandwidth" : "51.2 kHz",
+ "ccld" : false,
+ "channel" : 3,
+ "destinations" : [ "socket" ],
+ "enabled" : true,
+ "filter" : "DC",
+ "floating" : false,
+	"bridgeCompletion"  : "Half",
+	"bridgeQuarterCompletionImpedance" : "350 Ohm",
+	"bridgeExcCurrent" : 4.0,               
+	"bridgeExcOn" : true,                  
+	"bridgeExcVoltage" : 0.0,              
+	"bridgeRemoteSenseWiring" : "None",     
+	"bridgeShunt" : false,                  
+	"bridgeSingleEnd" : false,              
+	"bridgeSupplyType" : "DC Voltage",      
+ "ConnectorSelect" : "Bridge",
+ "name" : "Channel 3",
+ "polvolt" : false,
+ "range" : "10 Vpeak",
+ "transducer" : {
+ "requires200V" : false,
+ "requiresCcld" : false,
+ "sensitivity" : 1,
+ "serialNumber" : 0,
+ "type" : {
+ "model" : "",
+ "number" : "None",
+ "prefix" : "",
+ "variant" : ""
+ },
+ "unit" : "V"
+ }
+ }
+ ],
+ "maxSize" : 2147483647,
+ "name" : "Default setup",
+ "recordingMode" : "Single"
+ }

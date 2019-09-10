@@ -1,0 +1,9 @@
+{
+   "channels" : [
+      {
+         "channel" : 1,
+         "busType" : "HighSpeedWithoutTerminator",
+         "baudRateTimeout" : 10
+      }
+   ]
+}

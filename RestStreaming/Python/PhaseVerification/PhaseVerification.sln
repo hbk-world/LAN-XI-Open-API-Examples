@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PhaseVerification", "PhaseVerification\PhaseVerification.pyproj", "{7A9CE157-7AF5-42AE-B0B5-3CC447F5092D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Test", "Test\Test.pyproj", "{1282F355-0CE1-4E7B-8802-88285B6568AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A9CE157-7AF5-42AE-B0B5-3CC447F5092D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9CE157-7AF5-42AE-B0B5-3CC447F5092D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1282F355-0CE1-4E7B-8802-88285B6568AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1282F355-0CE1-4E7B-8802-88285B6568AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E9B3B8A-292D-4400-9C21-9B51653E8370}
+	EndGlobalSection
+EndGlobal

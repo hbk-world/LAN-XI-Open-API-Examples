@@ -1,0 +1,4 @@
+http://10.116.121.196/SetPower.cgi?p1=0+p2=0
+http://10.116.121.196/SetPower.cgi?p1=1+p2=1
+http://192.168.0.50/set.cmd?user=admin&pass=12345678&cmd=setpower+p62=0+p64=0
+http://192.168.0.50/set.cmd?user=admin&pass=12345678&cmd=setpower+p62=1+p64=1

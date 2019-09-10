@@ -1,0 +1,14 @@
+﻿OutputStreaming
+
+This sample shows a very basic use of output streaming over network on a B&K LAN-XI 3160 module.
+The module is configured for output streaming using REST commands, and socket connections are made to transfer samples to the module. Signals (Sines of specified frequencies) are generated on the PC.
+
+The purpose of the sample is to illustrate what is needed to make output streaming work, and thus there has not been put much emphasis on error handling etc. The example generates one chunk of samples per channel to send to the module, and timing of buffers, signals etc. is not considered.
+
+To run this example, change the values of the constants (LANXI_IP - FREQ1 and FREQ2) to match the desired setup:
+LANXI_IP: IP Address of the 3160 module to stream to.
+FREQ1: Frequency of the tone to send to output channel 1.
+FREQ2: Frequency of the tone to send to output channel 2.
+SAMPLES_TO_PRIME: Number of samples to prime in the generator buffers of the module before output is started. Higher value may avoid buffer underruns but introduce a greater latency. 3*6000 samples should work.
+
+The OutputStreaming_OutputChannelStartStreaming.json file may be altered to change which channels to start. OutputStreaming_OutputChannelSetupStreaming.json may be changed to configure the generators - frequencies etc.

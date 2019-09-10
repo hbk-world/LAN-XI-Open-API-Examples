@@ -1,0 +1,20 @@
+{  
+   "TxMessages": [
+	   {
+	   "channel": 1,
+	   "messageID": 2016,
+	   "cycleTime": 250,
+	   "messageInfo": 0,
+	   "dataSize": 3,
+	   "data": [2, 1, 12]
+	   },
+	   {
+	   "channel": 1,
+	   "messageID": 2016,
+	   "cycleTime": 250,
+	   "messageInfo": 0,
+	   "dataSize": 3,
+	   "data": [2, 1, 13]
+	   }
+   ]
+}

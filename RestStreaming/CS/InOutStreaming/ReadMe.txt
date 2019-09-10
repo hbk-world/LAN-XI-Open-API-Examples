@@ -1,0 +1,17 @@
+﻿InOutStreaming
+
+This sample shows a basic use of both input and output on a B&K LAN-XI 3160 module.
+The module is configured for simultaneous input and output streaming using REST commands, and socket connections are made to transfer samples to/from the module.
+Input channels 1 and 2 are looped (through the PC) to the output channels ("echo").
+
+The purpose of the sample is to illustrate what is needed to make bidirectional streaming work, and thus there has not been put much emphasis on error handling etc.
+
+To run this example, change the values of the constants (LANXI_IP - ...) to match the desired setup:
+LANXI_IP: IP Address of the 3160 module to stream to/from.
+SAMPLES_TO_RECEIVE: Number of samples to receive and loop back.
+SAMPLES_TO_PRIME: Number of samples to prime in the generator buffers of the module before output is started. Higher value may avoid buffer underruns but 
+                  introduce a greater latency. 3*6000 samples should work.
+
+The InOutStreaming_InputChannelSetup.json file may be altered to change input channel setup.
+The InOutStreaming_OutputChannelStartStreaming.json file may be altered to change which channels to start.
+    InOutStreaming_OutputChannelSetupStreaming.json may be changed to configure the generators - frequencies etc.

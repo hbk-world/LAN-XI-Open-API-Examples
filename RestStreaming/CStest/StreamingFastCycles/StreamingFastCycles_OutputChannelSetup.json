@@ -1,0 +1,42 @@
+{
+    "bufferSize" : 1048576,
+    "outputs" :
+    [
+        {
+            "floating" : false,
+            "gain" : 0.01,
+            "inputs" :
+            [
+                {
+                    "gain" : 0.999,
+                    "number" : 1,
+                    "samplingRate" : 3,
+                    "signalType" : "stream"
+                },
+                {
+                    "number" : 2,
+                    "signalType" : "none"
+                }
+            ],
+            "number" : 1
+        },
+        {
+            "floating" : false,
+            "gain" : 0.01,
+            "inputs" :
+            [
+                {
+                    "gain" : 0.999,
+                    "number" : 1,
+                    "samplingRate" : 3,
+                    "signalType" : "stream"
+                },
+                {
+                    "number" : 2,
+                    "signalType" : "none"
+                }
+            ],
+            "number" : 2
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "outputs" :
+    [
+      {
+        "floating": false,
+        "gain": 0.5,
+        "offset": 0.0,
+        "mixfunction":  "mul",
+        "inputs": [
+          {
+            "frequency": 4096,
+            "phase": 0.0,
+            "gain": 0.999,
+            "offset": 0.0,
+            "number": 1,
+            "signalType": "sine"
+          },
+          {
+            "number": 2,
+            "frequency": 64,
+            "phase": 0.0,
+            "highlevel": 0.999,
+            "lowlevel":  0.0,
+            "dutycycle": 50,
+            "repetitions": 0,
+            "offset": 0.0,
+            "signalType": "square"
+          }
+        ],
+        "number": 1
+      }
+
+    ]
+}
