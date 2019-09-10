@@ -8,3 +8,5 @@ The code in this repository shows how to use "Open API" in different programming
 
 The code in LAN-XI-Open-API-Examples/RestStreaming/CS/ has been tested in 2019.
 The code in other directories has not been tested with the latest firmware.
+
+You will need a "Open API" licens stored inside the LAN-XI module, before you can use the examples.
