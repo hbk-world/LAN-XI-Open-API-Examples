@@ -9,3 +9,5 @@ The code in LAN-XI-Open-API-Examples/RestStreaming/CS/ has been tested in 2019.
 The code in other directories has not been tested with the latest firmware.
 
 You will need an "Open API" license stored inside the LAN-XI module, before you can use the examples.
+github URL:
+https://github.com/hbk-world/LAN-XI-Open-API-Examples
