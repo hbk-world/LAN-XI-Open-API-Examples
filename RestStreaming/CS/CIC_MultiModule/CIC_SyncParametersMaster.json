@@ -1,0 +1,8 @@
+﻿{
+  "synchronization": {
+    "mode": "ptp",
+    "domain": 42,
+    "switchmethod": "ptp",
+    "preferredMaster": true
+  }
+}
