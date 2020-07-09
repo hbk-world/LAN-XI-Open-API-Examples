@@ -149,13 +149,14 @@ namespace Shared
             int seconds = 0;
             bool result = false;
             string currentState = "";
+            uint sec = 0;
 
             for (; ; )
             {
                 // Get the module state
                 Dictionary<string, dynamic> dict = GetRequestWithPath("/rest/rec/onchange");
                 currentState = dict["moduleState"];
-                Console.WriteLine("{0} WaitForRecorderState: {1}, got {2}", host, state, currentState);
+                Console.WriteLine("{0} WaitForRecorderState: {1}, got {2}, ({3} sec)", host, state, currentState, sec++);
 
                 // See if the state is the one anticipated
                 if (state.Equals(currentState))
@@ -199,13 +200,13 @@ namespace Shared
             int seconds = 0;
             bool result = false;
             string currentState = "";
-
+            uint sec = 0;
             for (; ; )
             {
                 // Get the module state
                 Dictionary<string, dynamic> dict = GetRequestWithPath("/rest/rec/onchange");
                 currentState = dict["inputStatus"];
-                Console.WriteLine("WaitForInputStatus: {0}, got {1}", state, currentState);
+                Console.WriteLine("WaitForInputStatus: {0}, got {1}, ({2} sec)", state, currentState,sec++);
 
                 // See if the state is the one anticipated
                 if (state.Equals(currentState))

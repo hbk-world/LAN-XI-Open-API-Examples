@@ -37,3 +37,6 @@ Frame_3050_3160 added, showing a single frame with two modules.
 PTP_MultiFrame added, showing three modules in two frames.
 Reboot_html and Reboot_rest, showing two methods to reboot a module.
 PTP_MultiThreadInputStreaming added. It demos how to setup and configure several modules simultaneously. 
+
+2020
+CIC_MultiModule added, showing how to prepare module for CIC measurement. The same princip must be used for single module
