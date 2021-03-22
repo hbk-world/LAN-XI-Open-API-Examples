@@ -1,0 +1,9 @@
+﻿{
+  "channels": [1,2],
+  "generator": {
+    "frequency": 1024.0,
+    "gain": 0.9,
+    "offset": 0.0,
+    "phase": 0.0
+  }
+}
