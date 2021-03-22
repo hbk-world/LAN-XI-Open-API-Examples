@@ -9,6 +9,24 @@ using System.Web.Script.Serialization;
 
 namespace Shared
 {
+    public class CTedsType
+    {
+        public string model { get; set; }
+        public string number { get; set; }
+        public string prefix { get; set; }
+        public string variant { get; set; }
+    }
+    public class CTeds
+    {
+        public string direction { get; set; }
+        public string requires200V { get; set; }
+        public string requiresCcld { get; set; }
+        public string sensitivity { get; set; }
+        public string serialNumber { get; set; }
+        public string teds { get; set; }
+        public CTedsType type { get; set; }
+        public string unit { get; set; }
+    }
     public class LanXIRESTBoundary
     {
         string host { get; set; }
@@ -82,6 +100,67 @@ namespace Shared
         }
 
         /// <summary>
+        /// Perform a HTTP request to the host with the body specified. Any response is parsed as JSON array.
+        /// </summary>
+        /// <param name="path">Path to the request resource on the host.</param>
+        /// <param name="method">Method to use, ie. GET, PUT, POST etc.</param>
+        /// <param name="body">Body to send with the request. If no body is to be sent, set to null.</param>
+        /// <returns>list of CTeds containing key-value pairs corresponding to the JSON structure received from the host.</returns>
+        public List<CTeds> RequestWithPathTeds(string path, string method, string body, bool printout)
+        {
+            if (printout == true)
+                Console.WriteLine("{0} {1} {2}", host, method, path);
+
+            // Create a request to send to the host
+            string uri = host + path;
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://" + host + path);
+            request.Method = method;
+            request.ContentType = "application/json";
+
+            if (body == null)
+            {
+                request.ContentLength = 0;
+            }
+            else
+            {
+                request.ContentLength = body.Length;
+
+                // Send any request body to the host
+                StreamWriter requestWriter = new StreamWriter(request.GetRequestStream(), System.Text.Encoding.ASCII);
+                requestWriter.Write(body);
+                requestWriter.Close();
+            }
+
+            try
+            {
+                // Get the response
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                StreamReader responseReader = new StreamReader(response.GetResponseStream());
+                string responseText = responseReader.ReadToEnd();
+                responseReader.Close();
+                response.Close();
+
+                if (responseText == "")
+                    responseText = "{\"response\": \"none\"}";  // Avoid returning null
+
+
+                // Deserialize JSON response into dictionary
+                var serializer = new JavaScriptSerializer();
+                List<CTeds> jsonResponse = serializer.Deserialize<List<CTeds>>(responseText);
+                return jsonResponse;
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine("WebException({0}), {1} (Status={2})", uri, ex.Message, ex.Status);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception({0}), {1}", uri, ex.Message);
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Perform a HTTP PUT request to the host with the body specified. Any response is parsed as JSON.
         /// </summary>
         /// <param name="path">Path to the request resource on the host.</param>
@@ -149,13 +228,14 @@ namespace Shared
             int seconds = 0;
             bool result = false;
             string currentState = "";
+            uint sec = 0;
 
             for (; ; )
             {
                 // Get the module state
                 Dictionary<string, dynamic> dict = GetRequestWithPath("/rest/rec/onchange");
                 currentState = dict["moduleState"];
-                Console.WriteLine("{0} WaitForRecorderState: {1}, got {2}", host, state, currentState);
+                Console.WriteLine("{0} WaitForRecorderState: {1}, got {2}, ({3} sec)", host, state, currentState, sec++);
 
                 // See if the state is the one anticipated
                 if (state.Equals(currentState))
@@ -199,13 +279,13 @@ namespace Shared
             int seconds = 0;
             bool result = false;
             string currentState = "";
-
+            uint sec = 0;
             for (; ; )
             {
                 // Get the module state
                 Dictionary<string, dynamic> dict = GetRequestWithPath("/rest/rec/onchange");
                 currentState = dict["inputStatus"];
-                Console.WriteLine("WaitForInputStatus: {0}, got {1}", state, currentState);
+                Console.WriteLine("WaitForInputStatus: {0}, got {1}, ({2} sec)", state, currentState,sec++);
 
                 // See if the state is the one anticipated
                 if (state.Equals(currentState))

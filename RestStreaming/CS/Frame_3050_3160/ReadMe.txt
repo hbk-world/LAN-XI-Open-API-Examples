@@ -6,7 +6,9 @@ The modules are configured for streaming using REST commands, and a socket conne
 The samples from all modules are assembled into 24-bit integers and stored in a simple file where they may be treated further.
 
 The purpose of the sample is to illustrate what is needed to make frame synchronization work with input streaming, and a sine output
-and thus there has not been put much emphasis on error handling etc. 
+and thus there has not been put much emphasis on error handling etc.
+The sync mode is set to "stand-alone".
+Teds detect are enabled, some values of the detected are printet on the console
 The example may also only store a small number of samples, due to the way buffering and file writing was constructed.
 
 To run this example, change the values of the constants (LANXI_IP - OUTPUT_FILE and SAMPLES_TO_RECEIVE) to match the desired setup:
@@ -17,8 +19,6 @@ SAMPLES_TO_RECEIVE: Sets the number of samples to gather for each channel - and 
 
 Furthermore, the
 Frame_3050_3160__OpenParameters.json,
-Frame_3050_3160__SyncParametersMaster.json,
-Frame_3050_3160__SyncParametersSlave.json,
 Frame_3050_3160__MasterInputChannelSetup.json,
 Frame_3050_3160__SlaveInputChannelSetup.json,
 Frame_3050_3160__OutputChannelSetup.json and

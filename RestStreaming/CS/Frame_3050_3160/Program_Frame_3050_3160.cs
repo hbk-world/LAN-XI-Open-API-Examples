@@ -11,8 +11,8 @@ namespace Frame_3050_3160
 {
     class Program
     {
-        static readonly string MASTER_IP = "10.100.35.79"; // IP address (or hostname) of the 3050 LAN-XI module (Frame master=slot 1)
-        static readonly string SLAVE_IP = "10.100.35.157"; // IP address (or hostname) of the 3160 LAN-XI module (Frame slave)
+        static readonly string MASTER_IP = "10.100.36.58"; // IP address (or hostname) of the 3050 LAN-XI module (Frame master=slot 1)
+        static readonly string SLAVE_IP = "10.100.36.179"; // IP address (or hostname) of the 3160 LAN-XI module (Frame slave)
         static readonly string OUTPUT_FILE = "LANXI.out"; // Path to the file where the samples received should be stored. Path is relative to the executed .exe file.
         static readonly int SAMPLES_TO_RECEIVE = 4096 * 64; // Number of samples to receive. Must be a multiple of chunkSize (4096). 32*4096 = 131072 samples = 1s.
 
@@ -25,6 +25,8 @@ namespace Frame_3050_3160
         static int NumberOfModules = 2;
 
         static int samples_to_receive = SAMPLES_TO_RECEIVE;
+        static List<CTeds> M_Arr;
+        static List<CTeds> S_Arr;
 
         static void Main(string[] args)
         {
@@ -57,6 +59,10 @@ namespace Frame_3050_3160
             LanXIRESTBoundary master = new LanXIRESTBoundary(master_ip);
             LanXIRESTBoundary slave = new LanXIRESTBoundary(slave_ip);
 
+            // Set sync mode to stand-alone
+            master.PutRequestWithPath("/rest/rec/syncmode", "{\"synchronization\": {\"mode\": \"stand-alone\",\"usegps\": false}}");
+            slave.PutRequestWithPath("/rest/rec/syncmode", "{\"synchronization\": {\"mode\": \"stand-alone\"}}");
+
             // Start measurement
             // During this process commands are generally performed on SLAVEs first, finished with MASTER
 
@@ -64,6 +70,7 @@ namespace Frame_3050_3160
             string openParameters = File.ReadAllText(@"Frame_3050_3160_OpenParameters.json");
             slave.PutRequestWithPath("/rest/rec/open", openParameters);
             master.PutRequestWithPath("/rest/rec/open", openParameters);
+
 
             // Prepare generator
             string outputChannelStart = File.ReadAllText(@"Frame_3050_3160_OutputChannelStart.json");
@@ -82,6 +89,24 @@ namespace Frame_3050_3160
             master.WaitForInputState("Sampling");
             slave.WaitForRecorderState("RecorderOpened");
             master.WaitForRecorderState("RecorderOpened");
+
+            // Get TEDS information
+            S_Arr = slave.RequestWithPathTeds("/rest/rec/channels/input/all/transducers","GET",null,false);
+            M_Arr = master.RequestWithPathTeds("/rest/rec/channels/input/all/transducers", "GET", null, false);
+            for (i = 0; i < S_Arr.Count; i++)
+            {
+                if (S_Arr[i] != null)
+                {
+                    Console.WriteLine("Slave Tranducer serialNumber {0}\r\n  type.number {1} ", S_Arr[0].serialNumber, S_Arr[0].type.number);
+                }
+            }
+            for (i = 0; i < M_Arr.Count; i++)
+            {
+                if (M_Arr[i] != null)
+                {
+                    Console.WriteLine("Master Tranducer serialNumber {0}\r\n  type.number {1} ", M_Arr[0].serialNumber, M_Arr[0].type.number);
+                }
+            }
 
             // Create Recorder configuration on all modules
             slave.PutRequestWithPath("/rest/rec/create", null);
