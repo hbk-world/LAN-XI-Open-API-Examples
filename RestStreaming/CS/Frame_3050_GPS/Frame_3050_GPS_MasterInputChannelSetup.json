@@ -1,0 +1,157 @@
+ {
+ "channels" : [
+ {
+ "bandwidth" : "51.2 kHz",
+ "ccld" : false,
+ "channel" : 1,
+ "destinations" : [ "socket" ],
+ "enabled" : true,
+ "filter" : "7.0 Hz",
+ "floating" : false,
+ "name" : "Channel 1",
+ "polvolt" : false,
+ "range" : "10 Vpeak",
+ "transducer" : {
+ "requires200V" : false,
+ "requiresCcld" : false,
+ "sensitivity" : 1,
+ "serialNumber" : 0,
+ "type" : {
+ "model" : "",
+ "number" : "None",
+ "prefix" : "",
+ "variant" : ""
+ },
+ "unit" : "V"
+ }
+ },
+  {
+    "bandwidth": "51.2 kHz",
+    "ccld": false,
+    "channel": 2,
+    "destinations": [ "socket" ],
+    "enabled": false,
+    "filter": "7.0 Hz",
+    "floating": false,
+    "name": "Channel 2",
+    "polvolt": false,
+    "range": "10 Vpeak",
+    "transducer": {
+      "requires200V": false,
+      "requiresCcld": false,
+      "sensitivity": 1,
+      "serialNumber": 0,
+      "type": {
+        "model": "",
+        "number": "None",
+        "prefix": "",
+        "variant": ""
+      },
+      "unit": "V"
+    }
+  },
+  {
+    "bandwidth": "51.2 kHz",
+    "ccld": false,
+    "channel": 3,
+    "destinations": [ "socket" ],
+    "enabled": false,
+    "filter": "7.0 Hz",
+    "floating": false,
+    "name": "Channel 3",
+    "polvolt": false,
+    "range": "10 Vpeak",
+    "transducer": {
+      "requires200V": false,
+      "requiresCcld": false,
+      "sensitivity": 1,
+      "serialNumber": 0,
+      "type": {
+        "model": "",
+        "number": "None",
+        "prefix": "",
+        "variant": ""
+      },
+      "unit": "V"
+    }
+  },
+  {
+    "bandwidth": "51.2 kHz",
+    "ccld": false,
+    "channel": 4,
+    "destinations": [ "socket" ],
+    "enabled": false,
+    "filter": "7.0 Hz",
+    "floating": false,
+    "name": "Channel 4",
+    "polvolt": false,
+    "range": "10 Vpeak",
+    "transducer": {
+      "requires200V": false,
+      "requiresCcld": false,
+      "sensitivity": 1,
+      "serialNumber": 0,
+      "type": {
+        "model": "",
+        "number": "None",
+        "prefix": "",
+        "variant": ""
+      },
+      "unit": "V"
+    }
+  },
+  {
+    "bandwidth": "51.2 kHz",
+    "ccld": false,
+    "channel": 5,
+    "destinations": [ "socket" ],
+    "enabled": false,
+    "filter": "7.0 Hz",
+    "floating": false,
+    "name": "Channel 4",
+    "polvolt": false,
+    "range": "10 Vpeak",
+    "transducer": {
+      "requires200V": false,
+      "requiresCcld": false,
+      "sensitivity": 1,
+      "serialNumber": 0,
+      "type": {
+        "model": "",
+        "number": "None",
+        "prefix": "",
+        "variant": ""
+      },
+      "unit": "V"
+    }
+  }
+ ,
+  {
+    "bandwidth": "51.2 kHz",
+    "ccld": false,
+    "channel": 6,
+    "destinations": [ "socket" ],
+    "enabled": false,
+    "filter": "7.0 Hz",
+    "floating": false,
+    "name": "Channel 4",
+    "polvolt": false,
+    "range": "10 Vpeak",
+    "transducer": {
+      "requires200V": false,
+      "requiresCcld": false,
+      "sensitivity": 1,
+      "serialNumber": 0,
+      "type": {
+        "model": "",
+        "number": "None",
+        "prefix": "",
+        "variant": ""
+      },
+      "unit": "V"
+    }
+  }],
+ "maxSize" : 2147483647,
+ "name" : "Default setup",
+ "recordingMode" : "Single"
+ }
