@@ -1,3 +1,6 @@
+# $${\color{red}MOVED}$$
+# https://github.com/hbkworld/LAN-XI-Open-API-Examples
+
 # LAN-XI-Open-API-Examples
 LAN-XI modules are made by Brüel & Kjær in Denmark.
 These modules are mainly used to measure acoustic and vibration signals from microphones and accelerometers, however some support CAN and others have bridge inputs.
